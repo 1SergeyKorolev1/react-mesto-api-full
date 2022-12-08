@@ -1,0 +1,26 @@
+.profile__edit-avatar {
+  min-width: 130px;
+  min-height: 130px;
+  background-color: rgba(0, 0, 0, 0.8);
+  background-image: url(../../../images/KARANDASH.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 25px;
+  opacity: 0;
+  position: absolute;
+  left: -5px;
+  padding: 0;
+  top: -5px;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+.profile__edit-avatar:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+@media screen and (max-width: 500px) {
+  .profile__edit-avatar {
+    left: 0;
+    right: 0;
+  }
+}

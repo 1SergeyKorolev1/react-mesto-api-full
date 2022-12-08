@@ -1,0 +1,19 @@
+.view-input {
+  min-width: 358px;
+  margin: auto;
+  border: none;
+  border-bottom: 1px solid #0000002f;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  outline: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+/* 
+.view-input:invalid {
+  border-bottom: 1px solid red;
+} */

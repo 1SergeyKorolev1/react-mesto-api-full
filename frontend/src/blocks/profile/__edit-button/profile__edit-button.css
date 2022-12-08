@@ -1,0 +1,22 @@
+.profile__edit-button {
+  width: 24px;
+  height: 24px;
+  background-color: #000000;
+  background-image: url(../../../images/KARANDASH.svg);
+  background-size: 13px 13px;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid #fff;
+  color: #fff;
+  margin-left: 18px;
+  transition: all 1s ease;
+}
+@media screen and (max-width: 500px) {
+  .profile__edit-button {
+    margin-left: 10px;
+  }
+}
+.profile__edit-button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}

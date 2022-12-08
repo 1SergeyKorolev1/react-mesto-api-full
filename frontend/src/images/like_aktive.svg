@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<svg width="22" height="19" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <g class="layer">
+  <title>Layer 1</title>
+  <path d="m20.2991,9.78586c2.2679,-2.24248 2.2679,-5.88373 0,-8.104c-2.268,-2.24248 -5.9505,-2.24248 -8.2185,0l-1.1002,1.11014l-1.10033,-1.08794c-2.26792,-2.26468 -5.9505,-2.26468 -8.19597,-0.0222c-1.10028,1.08793 -1.6841,2.53111 -1.6841,4.0631c0,1.53199 0.60628,2.97517 1.6841,4.0631l9.2963,9.19194l9.3187,-9.21414zm-18.862,-4.0409c0,-1.15454 0.4491,-2.22027 1.27992,-3.01957c0.85328,-0.84371 1.95356,-1.26556 3.05384,-1.26556c1.10028,0 2.20056,0.42185 3.05384,1.26556l2.1557,2.10926l2.1556,-2.13147c1.6841,-1.6652 4.446,-1.6652 6.1077,0c0.8084,0.7993 1.2799,1.86503 1.2799,3.01958c0,1.15454 -0.4491,2.22027 -1.2799,3.01957l-8.2633,8.19277l-8.26338,-8.17057c-0.80837,-0.8215 -1.27992,-1.88723 -1.27992,-3.01957z" fill="black" id="svg_1"/>
+  <ellipse cx="6.123205" cy="5.94828" fill="#070202" id="svg_3" rx="2.874743" ry="2.566735" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5"/>
+  <ellipse cx="15.98768" cy="6.154003" fill="#070202" id="svg_5" rx="2.874743" ry="2.566735" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5"/>
+  <ellipse cx="10.854208" cy="10.466118" fill="#070202" id="svg_6" rx="2.874743" ry="2.566735" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5"/>
+  <rect fill="#070202" height="0" id="svg_7" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" transform="rotate(-49.9863 -7.89117 2.76553)" width="7.289528" x="-11.535933" y="2.765529"/>
+  <rect fill="#070202" height="1.334702" id="svg_8" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" transform="rotate(-43.6881 12.1807 12.1598)" width="4.517454" x="9.921973" y="11.492428"/>
+  <rect fill="#070202" height="1.334702" id="svg_9" stroke="#000000" stroke-dasharray="null" stroke-linecap="null" stroke-linejoin="null" stroke-width="5" transform="rotate(44.1929 8.69815 10.6715)" width="4.517454" x="6.439424" y="10.004107"/>
+ </g>
+</svg>

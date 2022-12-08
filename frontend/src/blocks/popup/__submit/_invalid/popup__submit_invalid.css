@@ -1,0 +1,10 @@
+.popup__submit_invalid {
+  opacity: 0.2;
+  border: 1px solid #000000;
+  background-color: #fff;
+  color: #000000;
+}
+.popup__submit_invalid:hover {
+  opacity: 0.2;
+  cursor: auto;
+}

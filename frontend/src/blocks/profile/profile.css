@@ -1,0 +1,13 @@
+.profile {
+  width: 100%;
+  position: relative;
+  min-height: 120px;
+  color: #fff;
+  display: flex;
+  transition: all 1s ease;
+}
+@media screen and (max-width: 500px) {
+  .profile {
+    flex-direction: column;
+  }
+}

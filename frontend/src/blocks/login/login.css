@@ -1,0 +1,13 @@
+.login {
+  color: #ffffff;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 121.5px);
+}
+
+@media screen and (max-width: 900px) {
+  .login {
+    height: calc(100vh - 94.5px);
+  }
+}

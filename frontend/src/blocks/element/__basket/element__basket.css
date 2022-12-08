@@ -1,0 +1,17 @@
+.element__basket {
+  width: 18px;
+  height: 19px;
+  background-color: rgba(255, 255, 255, 0);
+  position: absolute;
+  background-image: url(../../../images/korzina_got.svg);
+  background-size: 18px 19px;
+  background-position: center;
+  background-repeat: no-repeat;
+  top: 25px;
+  right: 25px;
+  border: none;
+}
+.element__basket:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}

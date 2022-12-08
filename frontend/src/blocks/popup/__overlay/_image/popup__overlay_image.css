@@ -1,0 +1,6 @@
+.popup__overlay_image {
+  min-width: none;
+  max-height: none;
+  background-color: rgba(245, 245, 220, 0);
+  box-shadow: none;
+}

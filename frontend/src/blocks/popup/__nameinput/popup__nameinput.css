@@ -1,0 +1,8 @@
+.popup__nameinput {
+}
+
+@media screen and (max-width: 544px) {
+  .popup__nameinput {
+    min-width: 238px;
+  }
+}

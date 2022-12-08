@@ -1,0 +1,8 @@
+.popup__jobinput {
+}
+
+@media screen and (max-width: 544px) {
+  .popup__jobinput {
+    min-width: 238px;
+  }
+}
