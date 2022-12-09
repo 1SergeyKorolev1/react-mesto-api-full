@@ -1,4 +1,4 @@
-const { JWT_SECRET } = process.env;
+const { JWT_SECRET = 'secret' } = process.env;
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const UserSchema = require('../models/user');
@@ -33,9 +33,9 @@ module.exports.getUserMe = (req, res, next) => {
         err.name = 'ResourceNotFound';
         throw err;
       } else {
-        res.status(GOOD_REQUEST).send({
+        res.status(GOOD_REQUEST).send(
           data,
-        });
+        );
       }
     })
     .catch((err) => {
@@ -63,9 +63,9 @@ module.exports.getUser = (req, res, next) => {
         err.name = 'ResourceNotFound';
         throw err;
       } else {
-        res.status(GOOD_REQUEST).send({
+        res.status(GOOD_REQUEST).send(
           data,
-        });
+        );
       }
     })
     .catch((err) => {
@@ -125,6 +125,7 @@ module.exports.login = (req, res, next) => {
         err.name = 'Unauthorized';
         throw err;
       }
+      // console.log(123);
       const token = jwt.sign({ _id: user._id.toString() }, JWT_SECRET, { expiresIn: '7d' });
       res.send({ token });
     })
@@ -158,9 +159,9 @@ module.exports.patchUser = (req, res, next) => {
         err.name = 'ResourceNotFound';
         throw err;
       } else {
-        res.status(GOOD_REQUEST).send({
+        res.status(GOOD_REQUEST).send(
           data,
-        });
+        );
       }
     })
     .catch((err) => {
@@ -198,9 +199,9 @@ module.exports.patchAvatar = (req, res, next) => {
         err.name = 'ResourceNotFound';
         throw err;
       } else {
-        res.status(GOOD_REQUEST).send({
+        res.status(GOOD_REQUEST).send(
           data,
-        });
+        );
       }
     })
     .catch((err) => {

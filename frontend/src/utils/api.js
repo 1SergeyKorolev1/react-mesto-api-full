@@ -10,13 +10,19 @@ class Api {
 
   initialDataProfile() {
     return fetch(`${this._baseUrl}/users/me`, {
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.jwt}`,
+        "Content-Type": "application/json",
+      }
     }).then(this._getResponseData);
   }
 
   initialCardsData() {
     return fetch(`${this._baseUrl}/cards`, {
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.jwt}`,
+        "Content-Type": "application/json",
+      }
     }).then(this._getResponseData);
   }
 
@@ -25,12 +31,18 @@ class Api {
     if (isLiked) {
       return fetch(`${this._baseUrl}/cards/${idCard}/likes`, {
         method: "PUT",
-        headers: this._headers,
+        headers: {
+          authorization: `Bearer ${localStorage.jwt}`,
+          "Content-Type": "application/json",
+        },
       }).then(this._getResponseData);
     } else {
       return fetch(`${this._baseUrl}/cards/${idCard}/likes`, {
         method: "DELETE",
-        headers: this._headers,
+        headers: {
+          authorization: `Bearer ${localStorage.jwt}`,
+          "Content-Type": "application/json",
+        },
       }).then(this._getResponseData);
     }
   }
@@ -38,14 +50,20 @@ class Api {
   deleteCard(idCard) {
     return fetch(`${this._baseUrl}/cards/${idCard}`, {
       method: "DELETE",
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.jwt}`,
+        "Content-Type": "application/json",
+      },
     }).then(this._getResponseData);
   }
 
   nameAndJobValues(name, nameJob) {
     return fetch(`${this._baseUrl}/users/me`, {
       method: "PATCH",
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.jwt}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         name: name,
         about: nameJob,
@@ -56,7 +74,10 @@ class Api {
   sendAvatarData(link) {
     return fetch(`${this._baseUrl}/users/me/avatar`, {
       method: "PATCH",
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.jwt}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         avatar: link,
       }),
@@ -67,7 +88,10 @@ class Api {
     //console.log(name, link);
     return fetch(`${this._baseUrl}/cards`, {
       method: "POST",
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.jwt}`,
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify({
         name: name,
         link: link,
@@ -88,7 +112,7 @@ class Api {
 // });
 
 const api = new Api({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://api.svitogor.nomoredomains.club",
   headers: {
     authorization: `Bearer ${localStorage.jwt}`,
     "Content-Type": "application/json",

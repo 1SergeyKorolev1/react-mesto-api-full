@@ -48,7 +48,7 @@ class Auth {
 }
 
 const auth = new Auth({
-  baseUrl: "http://localhost:3001",
+  baseUrl: "https://api.svitogor.nomoredomains.club",
 });
 
 export { auth };

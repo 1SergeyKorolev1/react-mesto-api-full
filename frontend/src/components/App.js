@@ -14,13 +14,13 @@ import React from "react";
 import ImagePopup from "./ImagePopup.js";
 import { CurrentUserContext } from "../contexts/CurrentUserContext.js";
 import { CardsContext } from "../contexts/CardsContext.js";
-import { Redirect, Route, Switch, useHistory } from "react-router-dom";
+import { Route, Switch, useHistory } from "react-router-dom";
 import ProtectedRoute from "./ProtectedRoute.js";
 import InfoTooltip from "./InfoTooltip.js";
 
 function App() {
   const [currentCards, setCurrentCards] = React.useState([]);
-  const [currentUser, setCurrentUser] = React.useState({});
+  const [currentUser, setCurrentUser] = React.useState({ email: '', _id: '', name: '', avatar: '' });
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] =
     React.useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = React.useState(false);
@@ -76,7 +76,7 @@ function App() {
       .catch((err) => {
         console.log(`Ошибка ${err} повторите запросс позже`);
       });
-  }, []);
+  }, [loggedIn]);
 
   React.useEffect(() => {
     api
@@ -88,7 +88,7 @@ function App() {
       .catch((err) => {
         console.log(`Ошибка ${err} повторите запросс позже`);
       });
-  }, []);
+  }, [loggedIn]);
 
   const authCheck = (jwt) => {
     auth
@@ -97,8 +97,10 @@ function App() {
         if (res) {
           setLoggedIn(true);
           setUserData({
-            userId: res.data._id,
-            email: res.data.email,
+            userId: res._id,
+            email: res.email,
+            avatar: res.avatar,
+            name: res.name,
           });
           history.push("/");
         }
@@ -145,20 +147,19 @@ function App() {
       });
   }
 
-  console.log(loggedIn);
-
   function handleAuthorizedUser(data) {
     return auth
       .onAuthorize(data.name, data.about)
       .then((res) => {
         //setLoggedIn(true);
-        //console.log(res.token);
+        // console.log('tok', res.token);
         if (res.token) {
-          setLoggedIn(true);
+          // setLoggedIn(true);
           localStorage.setItem("jwt", res.token);
-          console.log(loggedIn);
-          console.log(localStorage);
-          Redirect("/");
+          authCheck(res.token)
+          // console.log(loggedIn);
+          // console.log(localStorage);
+          // Redirect("/");
         } else {
           console.log("У вас нет токена!");
         }
@@ -251,7 +252,7 @@ function App() {
   function onClickingOnLike(card) {
     // Снова проверяем, есть ли уже лайк на этой карточке
     //console.log(card.likes.some((i) => i._id === currentUser._id));
-    const isLiked = card.likes.some((i) => i._id === currentUser.data._id);
+    const isLiked = card.likes.some((i) => i._id === currentUser._id);
     // console.log(currentUser.data._id);
     //console.log(isLiked);
     // Отправляем запрос в API и получаем обновлённые данные карточки
@@ -269,12 +270,12 @@ function App() {
         console.log(`Ошибка ${err} повторите запросс позже`);
       });
   }
-
+  
   return (
     <CardsContext.Provider value={currentCards}>
       <CurrentUserContext.Provider value={currentUser}>
         <Header signOut={signOut} userData={userData} />
-        <ProtectedRoute
+        {loggedIn && <ProtectedRoute
           path="/"
           onAddPlace={handleAddPlaceClick}
           onEditProfile={handleEditProfileClick}
@@ -284,7 +285,7 @@ function App() {
           onDeletCard={onDeletCard}
           loggedIn={loggedIn}
           component={Main}
-        />
+        />}
         <ProtectedRoute path="/" loggedIn={loggedIn} component={Footer} />
         <Switch>
           <Route path="/sign-in">
