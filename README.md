@@ -1,8 +1,8 @@
 [![Tests](../../actions/workflows/tests-13-sprint.yml/badge.svg)](../../actions/workflows/tests-13-sprint.yml) [![Tests](../../actions/workflows/tests-14-sprint.yml/badge.svg)](../../actions/workflows/tests-14-sprint.yml)
 
-IP 158.160.42.6
-Frontend https://svitogor.nomoredomains.club
-Backend https://api.svitogor.nomoredomains.club
+* IP 158.160.42.6
+* Frontend https://svitogor.nomoredomains.club
+* Backend https://api.svitogor.nomoredomains.club
 
 ---
 # Проект Mesto бэкенд + фронт...
