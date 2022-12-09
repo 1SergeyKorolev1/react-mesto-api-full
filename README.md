@@ -4,6 +4,8 @@
 * Frontend https://svitogor.nomoredomains.club
 * Backend https://api.svitogor.nomoredomains.club
 
+`ssh svitogor@158.160.42.6` - подключение
+
 ---
 # Проект Mesto бэкенд + фронт...
 ---
@@ -21,9 +23,5 @@ _[Ссылка на репозиторий](https://github.com/1SergeyKorolev1/e
 `/errors` — папка с файлами описания классов обрабатываемых ошибок 
 `/middlewares` — папка с файлами описания мидлвар авторизации и логирования
 
-## Запуск проекта
-
-`npm run start` — запускает сервер   
-`npm run dev` — запускает сервер с hot-reload
 ---
 ---
