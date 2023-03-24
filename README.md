@@ -2,7 +2,7 @@
 
 ---
 # Проект: Место.
-[Ссылка на проект←](https://1sergeykorolev1.github.io/mesto/) 
+[Ссылка на проект←](https://svitogor.nomoredomains.club/) 
 ---
 
 _Проект из учебного курса [Я.Практикум](https://practicum.yandex.ru/) веб-разработка._
