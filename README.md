@@ -1,7 +1,7 @@
 [![Tests](../../actions/workflows/tests-13-sprint.yml/badge.svg)](../../actions/workflows/tests-13-sprint.yml) [![Tests](../../actions/workflows/tests-14-sprint.yml/badge.svg)](../../actions/workflows/tests-14-sprint.yml)
 
 ---
-# Проект: Место.
+# Проект Mesto бэкенд + фронт...
 [Ссылка на проект←](https://svitogor.nomoredomains.club/) 
 ---
 
@@ -15,11 +15,6 @@ _В проекте использовал грид верстки. Так же �
 * IP 158.160.42.6
 * Frontend https://svitogor.nomoredomains.club
 * Backend https://api.svitogor.nomoredomains.club
-
-
----
-# Проект Mesto бэкенд + фронт...
----
 
 _Проект из учебного курса [Я.Практикум](https://practicum.yandex.ru/)← веб-разработка._
 _Проект выполнял [Королев Сергей](https://vk.com/id46453265)←_
