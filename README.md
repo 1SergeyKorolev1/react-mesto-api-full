@@ -4,7 +4,6 @@
 * Frontend https://svitogor.nomoredomains.club
 * Backend https://api.svitogor.nomoredomains.club
 
-`ssh svitogor@158.160.42.6` - подключение
 
 ---
 # Проект Mesto бэкенд + фронт...
