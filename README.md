@@ -1,7 +1,7 @@
 
 ---
 # Проект Mesto бэкенд + фронт...
-[Ссылка на проект←](https://svitogor.nomoredomains.club/) 
+[Ссылка на проект←](https://svitogor.nomoredomains.club/) - в данный моент не работает (не оплачена ВМ)
 ---
 
 _Проект из учебного курса [Я.Практикум](https://practicum.yandex.ru/) веб-разработка._
